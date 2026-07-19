@@ -1,0 +1,90 @@
+export const stack = [
+  ["Frontend", "Next.js 15 (App Router)", "SEO, Server Components ja korkea suorituskyky"],
+  ["Styling", "Tailwind CSS v4", "Nopea kehitys ja yhtenäinen design system"],
+  ["UI", "shadcn/ui", "Kevyt, laadukas ja täysin muokattava komponenttipohja"],
+  ["Animoinnit", "Framer Motion", "Modernit ja suorituskykyiset mikrointeraktiot"],
+  ["CMS", "Sanity", "Erinomainen editorikokemus ja skaalautuva sisältömalli"],
+  ["Hosting", "Vercel", "Optimoitu Next.js-julkaisuputki"],
+  ["Kuvien hallinta", "Cloudinary", "Automaattiset formaatit ja optimointi"],
+  ["Lomakkeet", "React Hook Form + Zod", "Nopeat, tyypitetyt ja validoidut lomakkeet"],
+  ["CRM", "HubSpot tai Pipedrive", "Liidien hallinta ja myynnin seuranta"],
+  ["Analytics", "PostHog + Google Analytics 4", "Tuote- ja markkinointianalytiikka yhdessä"],
+  ["SEO", "next-seo + JSON-LD", "Schema.org-rakenteet ja metatiedot"],
+  ["Hakutoiminto", "Algolia", "Blogin ja resurssien haku myöhemmässä vaiheessa"],
+  ["Tietokanta", "Supabase", "Lomakkeet, referenssit ja asiakaskirjautuminen tarvittaessa"],
+] as const;
+
+export const sections = [
+  {
+    slug: "solutions",
+    title: "Ratkaisut",
+    eyebrow: "Solutions",
+    description: "Kokonaisuudet, joilla verkkopalvelu muuttaa liiketoiminnan tavoitteet mitattavaksi kasvuksi.",
+    highlights: ["Kasvustrategia", "Konversiopolut", "Automaatio"],
+  },
+  {
+    slug: "services",
+    title: "Palvelut",
+    eyebrow: "Services",
+    description: "Suunnittelu, toteutus, sisällönhallinta ja jatkuva optimointi samassa toimitusmallissa.",
+    highlights: ["Next.js-kehitys", "Design system", "Jatkuva kehitys"],
+  },
+  {
+    slug: "industries",
+    title: "Toimialat",
+    eyebrow: "Industries",
+    description: "Toimialakohtaiset viestit ja palvelupolut rakennetaan asiakkaiden ostoprosessin ympärille.",
+    highlights: ["B2B SaaS", "Asiantuntijapalvelut", "Teknologiayritykset"],
+  },
+  {
+    slug: "locations",
+    title: "Sijainnit",
+    eyebrow: "Locations",
+    description: "Paikalliset laskeutumissivut tukevat hakukonenäkyvyyttä ja alueellista kysyntää.",
+    highlights: ["Helsinki", "Tampere", "Turku"],
+  },
+  {
+    slug: "case-studies",
+    title: "Referenssit",
+    eyebrow: "Case studies",
+    description: "Asiakastarinat näyttävät työn vaikutuksen numeroina, prosessina ja lopputuloksina.",
+    highlights: ["Lähtötilanne", "Ratkaisu", "Tulokset"],
+  },
+  {
+    slug: "blog",
+    title: "Blogi",
+    eyebrow: "Blog",
+    description: "Ajankohtaiset artikkelit rakentavat asiantuntijuutta ja tukevat orgaanista kasvua.",
+    highlights: ["SEO-sisällöt", "Oppaat", "Näkemykset"],
+  },
+  {
+    slug: "resources",
+    title: "Resurssit",
+    eyebrow: "Resources",
+    description: "Ladattavat materiaalit ja työkalut muuttavat kiinnostuksen tunnistettaviksi liideiksi.",
+    highlights: ["Oppaat", "Checklistit", "Webinaarit"],
+  },
+  {
+    slug: "pricing",
+    title: "Hinnoittelu",
+    eyebrow: "Pricing",
+    description: "Selkeä hinnoittelu tekee ostamisesta helppoa ja kytkee työn liiketoimintahyötyihin.",
+    highlights: ["Projektit", "Retainer", "Auditointi"],
+  },
+  {
+    slug: "about",
+    title: "Meistä",
+    eyebrow: "About",
+    description: "Astronautti yhdistää strategian, designin ja teknologian käytännönläheiseksi tekemiseksi.",
+    highlights: ["Tiimi", "Tapa toimia", "Arvot"],
+  },
+  {
+    slug: "contact",
+    title: "Yhteys",
+    eyebrow: "Contact",
+    description: "Matalan kynnyksen yhteydenotto ohjaa oikeaan seuraavaan askeleeseen.",
+    highlights: ["Konsultaatio", "Tarjouspyyntö", "Kumppanuus"],
+  },
+] as const;
+
+export type Section = (typeof sections)[number];

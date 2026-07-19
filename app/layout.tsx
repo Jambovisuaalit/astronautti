@@ -14,9 +14,9 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 // Metadata
-const title = "Video embedding with next-video";
+const title = "Astronautti teknologiapino";
 const description =
-  "Next-video solves the hard problems with embedding, storing, streaming, and customizing video in your Next.js app.";
+  "Moderni Next.js-pohjainen verkkopalvelun teknologiavalinta, joka yhdistää sisällönhallinnan, analytiikan ja kasvutyökalut.";
 
 export const metadata: Metadata = {
   metadataBase: process.env.VERCEL_URL
@@ -28,13 +28,12 @@ export const metadata: Metadata = {
     title,
     description,
     url: "/",
-    locale: "en-US",
+    locale: "fi-FI",
     type: "website",
   },
   twitter: {
     title,
     description,
-    site: "@muxhq",
     card: "summary_large_image",
   },
 };
@@ -45,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fi">
       <body className={`${dmSans.variable} ${jetBrainsMono.variable}`}>{children}</body>
     </html>
   );

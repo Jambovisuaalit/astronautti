@@ -1,78 +1,43 @@
-import Image from "next/image";
-import Video from "next-video";
+import Link from "next/link";
+import { sections, stack } from "./content";
 import styles from "./page.module.css";
-import getStarted from "/videos/get-started.mp4";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <div className={styles.logos}>
-          <Image
-            className={styles.icon}
-            src="/nextjs.svg"
-            alt="Next.js Logo"
-            width={80}
-            height={80}
-            priority
-          />
-          <Image
-            className={styles.icon}
-            src="/plus.svg"
-            alt="Plus"
-            width={20}
-            height={20}
-            priority
-          />
-          <Image
-            className={styles.icon}
-            src="/next-video.svg"
-            alt="Next Video Logo"
-            width={80}
-            height={80}
-            priority
-          />
+    <main className={styles.page}>
+      <section className={styles.hero}>
+        <p className={styles.eyebrow}>Astronautti verkkopalvelun suunnitelma</p>
+        <h1>Moderni, skaalautuva sivustorakenne kasvua varten.</h1>
+        <p className={styles.lead}>
+          App Router -pohjainen toteutus jäsentää palvelut, toimialat,
+          referenssit, sisällöt ja yhteydenoton omiksi optimoitaviksi
+          kokonaisuuksikseen.
+        </p>
+        <div className={styles.primaryNav} aria-label="Pääsivut">
+          {sections.map((section) => (
+            <Link href={`/${section.slug}`} key={section.slug}>
+              {section.title}
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.stackSection} aria-labelledby="stack-heading">
+        <div className={styles.sectionHeader}>
+          <p className={styles.eyebrow}>Suositeltu stack</p>
+          <h2 id="stack-heading">Teknologiat ja perustelut</h2>
         </div>
 
-        <Video className={styles.video} src={getStarted} />
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href={`https://vercel.com/new/clone?repository-url=https://github.com/muxinc/next-video-starter&products=[{"type":"integration","productSlug":"mux","integrationSlug":"mux","protocol":"video"}]`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.icon}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://next-video.dev/docs"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+        <div className={styles.stackGrid}>
+          {stack.map(([area, technology, rationale]) => (
+            <article className={styles.card} key={area}>
+              <span className={styles.area}>{area}</span>
+              <h3>{technology}</h3>
+              <p>{rationale}</p>
+            </article>
+          ))}
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a href="https://next-video-demo.vercel.app" target="_blank" rel="noopener noreferrer">
-          <Image aria-hidden src="/window.svg" alt="Window icon" width={16} height={16} />
-          Demo
-        </a>
-        <a href="https://next-video.dev" target="_blank" rel="noopener noreferrer">
-          <Image aria-hidden src="/globe.svg" alt="Globe icon" width={16} height={16} />
-          Go to next-video.dev →
-        </a>
-      </footer>
-    </div>
+      </section>
+    </main>
   );
 }
