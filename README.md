@@ -20,6 +20,21 @@ Tämä Next.js-sovellus esittelee suositellun teknologiapinon modernille, skaala
 | Hakutoiminto | **Algolia** (myöhemmin) | Blogin ja resurssien haku |
 | Tietokanta | **Supabase** | Lomakkeet, referenssit, asiakaskirjautuminen tarvittaessa |
 
+## Sivustorakenne
+
+App Routeriin on mallinnettu seuraavat pääsivut:
+
+- `/solutions`
+- `/services`
+- `/industries`
+- `/locations`
+- `/case-studies`
+- `/blog`
+- `/resources`
+- `/pricing`
+- `/about`
+- `/contact`
+
 ## Kehitys
 
 ```bash
